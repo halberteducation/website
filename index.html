@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marty Halbert | Educational Consulting & Staff Development</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-dark: #1e293b;
+            --accent: #d97706;
+            --bg-light: #f8fafc;
+            --text-main: #334155;
+            --border-color: #cbd5e1;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+        header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 900px;
+            margin: -2rem auto 4rem;
+            padding: 0 1.5rem;
+        }
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        h2 {
+            color: var(--primary);
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .feature-box {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+        .feature-box h3 {
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .contact-box {
+            text-align: center;
+            background: #eff6ff;
+            border: 2px dashed #bfdbfe;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        .email-display {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 1rem 0;
+            word-break: break-all;
+        }
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: background 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #172554;
+        }
+        .btn-accent {
+            background-color: var(--accent);
+        }
+        .btn-accent:hover {
+            background-color: #b45309;
+        }
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            color: #64748b;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            background: white;
+        }
+        #copy-alert {
+            font-size: 0.85rem;
+            color: #16a34a;
+            margin-top: 0.5rem;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Marty Halbert</h1>
+        <p>Educational Consultant | Staff Development, Onboarding & Organizational Problem Solving</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Solving Complex Problems Through an Educational Lens</h2>
+            <p>Whether you are a corporate business scaling up your team onboarding, a growing startup structuring professional development (PD), or an educational institution looking for operational growth—learning design is the core solution.</p>
+            <p>By applying proven pedagogical frameworks and instructional design strategies to professional environments, we build clarity, retention, and high-performance teams.</p>
+            
+            <div class="grid">
+                <div class="feature-box">
+                    <h3>Corporate Onboarding</h3>
+                    <p>Transform standard orientation into structured, engaging learning pathways that reduce ramp-up time.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Staff Development (PD)</h3>
+                    <p>Custom professional development programs built to foster continuous growth and team alignment.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Schools & Districts</h3>
+                    <p>Direct institutional partnership for curriculum support, teacher coaching, and institutional problem solving.</p>
+                </div>
+            </div>
+
+            <div class="contact-box">
+                <h3>Get in Touch</h3>
+                <p>Ready to discuss how an educational framework can solve your organizational challenges? Reach out directly via email:</p>
+                <div class="email-display" id="email-text">marty_halbert@hotmail.com</div>
+                <div id="copy-alert">✓ Email copied to clipboard!</div>
+                
+                <div class="btn-group">
+                    <a href="mailto:marty_halbert@hotmail.com?subject=Consulting%20Inquiry" class="btn">Open Email Client</a>
+                    <button class="btn btn-accent" onclick="copyEmail()">Copy Email Address</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Marty Halbert Consulting &bull; Confidential & Proprietary</p>
+        <p>&copy; 2026 Marty Halbert. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function copyEmail() {
+            navigator.clipboard.writeText('marty_halbert@hotmail.com');
+            const alertBox = document.getElementById('copy-alert');
+            alertBox.style.display = 'block';
+            setTimeout(() => {
+                alertBox.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
